@@ -1,5 +1,9 @@
 import { useDispatch, useSelector } from "react-redux";
-import { decreament, increament, increamentByAmount } from "./Store/Reducers/CounterSlice";
+import {
+  decreament,
+  increament,
+  incrementAsync,
+} from "./Store/Reducers/CounterSlice";
 
 
 export default function Counter() {
@@ -26,7 +30,7 @@ export default function Counter() {
             Decreament{" "}
           </button>
           <button
-            onClick={() => dispatch(increamentByAmount(5))}
+            onClick={() => dispatch(incrementAsync(5))}
             className=" font-semibold text-white border-2 px-3 py-2 rounded bg-yellow-500 text-xl hover:bg-yellow-900"
           >
             Increament by 5{" "}
